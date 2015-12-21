@@ -1,10 +1,5 @@
 package edu.pokergame;
 
-/*
- *  Rezultaty sa uporzadkowane wzgledem wartosci figur w pokerze tak zeby dalo sie porownac 2 rezultaty w latwy sposob 
- *  patrzac na ich ordinal()
- */
-
 public enum Result {
 	HIGH(1),
 	PAIR(2),
