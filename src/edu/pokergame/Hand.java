@@ -120,7 +120,9 @@ public class Hand {
 	public void setDistanceHighToLow() {
 		int distance = CardValue.fromString(listOfSortedCards.first().getKey()).getCardNumber() - 
 				CardValue.fromString(listOfSortedCards.last().getKey()).getCardNumber();
-		this.distanceHighToLow = Math.abs(distance);
+		if(Math.abs(distance) == 4 && listOfSortedCards.size() == 5) {
+			this.distanceHighToLow = Math.abs(distance);			
+		}
 	}
 	
 	public void resetHighestCard(Hand hand) {

@@ -100,6 +100,18 @@ public class PokerGameTest {
 	}
 	
 	@Test
+	public void shouldHandleDistanceFourButNotStreet() {
+		// given
+		
+		// when
+		poker.doTheSplit("2H 2D 4D 5H 6S");
+		String result = poker.playRound(poker.returnPlayerOne());
+		
+		// then
+		Assert.assertEquals("PAIR", result);
+	}
+	
+	@Test
 	public void shouldHandlePoker() {
 		// given
 		
